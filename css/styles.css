@@ -1,11 +1,13 @@
 body {
     font-family: 'Space Mono', monospace;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .wrapper {
     display: grid;
     grid-gap: 20px;
+    grid-template-columns: 1fr;
 }
 
 h1, h2, h3 {
@@ -70,25 +72,24 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1;
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 10px;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 4fr;
 }
 
 nav ul {
     margin: 0;
     padding: 0;
-    list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    grid-columns: 1 / -1;
+    list-style-type: none;
+    grid-column: 2 / span 4;
 }
 
 nav li {
     font-size: 16px;
     color: black;
-    margin: 25px 12.5px 25px 12.5px;
-    display: inline-block;
+    margin: 25px 0;
 }
 
 aside li img{
@@ -100,13 +101,15 @@ aside {
     left: 0;
     z-index: 1;
 }
+
 aside ul {
     list-style-type: none;
     padding-inline-start: 0;
 }
+
 nav li a {
     color: #000;
-  }
+}
 
 header {
     background-image: url(../img/banner.jpg);
@@ -116,9 +119,6 @@ header {
     height: 80vh;
     position: relative;
     margin-bottom: 50px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: center;
     align-items: center;
 }
