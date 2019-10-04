@@ -73,9 +73,9 @@ nav {
     top: 0;
     z-index: 1;
     display: grid;
-    grid-column: 1 / -1;
+    width: 100%;
     gap: 10px;
-    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 4fr;
+    
 }
 
 nav ul {
@@ -83,6 +83,7 @@ nav ul {
     padding: 0;
     display: grid;
     list-style-type: none;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 4fr;
     grid-column: 2 / span 4;
 }
 
@@ -121,6 +122,7 @@ header {
     margin-bottom: 50px;
     justify-content: center;
     align-items: center;
+    display: grid;
 }
 
 img {
